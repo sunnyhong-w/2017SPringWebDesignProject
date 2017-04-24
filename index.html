@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>index.html</title>
+    <title>認識築夢</title>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9&appId=1952887284932903";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <header>
         <nav class="container">
-            <img class="logo" src="image/logo.jpg"/>
+            <a href="index.html"><img class="logo" src="image/logo.jpg"/></a>
             <ul>
                 <li><a href="index.html">認識築夢</a></li>
                 <li><a href="memberIntroduce.html">成員介紹</a></li>
@@ -18,7 +27,7 @@
         </nav>
     </header>
 
-    <div class="main">
+    <div class="main landingPage">
         <div class="introduce">
             <div class="container">
                 <!-- <img src="" alt="membersPhoto"> --><!--從缺中-->
@@ -48,11 +57,11 @@
                         <div class="recentShowDetail">
                             <div class="date">2017.08.27 2017.09.10</div>
                             <div class="title">謎莊</div>
-                            <div class="location">地點還不知道啦ＸＤ</div>
+                            <div class="location">台北市大同區延平北路二段237號2樓</div>
                         </div>
                     </div>
                     <div class="fanPage col span_4_of_12">
-                        <a href="https://www.facebook.com/wdtheatre/"></a>
+                        <div class="fb-page" data-href="https://www.facebook.com/wdtheatre/" data-tabs="timeline" data-width="372" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/wdtheatre/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/wdtheatre/">築夢劇坊</a></blockquote></div>
                     </div>
                 </div>
             </div>

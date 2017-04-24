@@ -2,57 +2,78 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>recentShow</title>
+    <link rel="stylesheet" href="style.css">
+    <title>最新演出</title>
 </head>
 <body>
-    <div class="header">
-        <img src="../image/logo.jpg" height="648" width="647"/>
-        <nav>
+    <header>
+        <nav class="container">
+            <a href="index.html"><img class="logo" src="image/logo.jpg"/></a>
             <ul>
-                <li>認識築夢</li>
-                <li><a href="../html/memberIntroduce.html"></a>成員介紹</li>
-                <li><a href="../html/recentShow.html"></a>最新演出</li>
-                <li><a href="../html/pastShows.html"></a>歷年演出</li>
+                <li><a href="index.html">認識築夢</a></li>
+                <li><a href="memberIntroduce.html">成員介紹</a></li>
+                <li><a href="recentShow.html">最新演出</a></li>
+                <li><a href="pastShows.html">歷年演出</a></li>
             </ul>
         </nav>
-    </div>
-    <div class="main">
-        <div class="activityInformation">
-            <h1>謎莊</h1>
-            <h2>00:00 -00:00 2017-08-27 /2017-09-10 在台北市社區營造中心 仁安醫院</h2>
-            <p>一個謎一樣的山莊
-                一張謎一樣的劇本
-                一段開始就不能停止的樂章
-                8/27 9/10 的晚上
-                快來跟我們一起解謎
-            </p>
-            <div class="insertGoogleMap">
-                <!--插入GoogleMap 要怎麼插入QQ-->
+    </header>
+
+    <div class="main recentShowPage">
+        <div class="container section group">
+            <div class="col span_8_of_12">
+                <div class="information">
+                    <h1>謎莊</h1>
+                    <div class="timeAndLocation">
+                        00:00 - 00:00 08/27, 09/10 在台北市社區營造中心 仁安醫院
+                    </div>
+                    <p>
+                        一個謎一樣的山莊<br/>
+                        一張謎一樣的劇本<br/>
+                        一段開始就不能停止的樂章<br/>
+                        8/27 9/10 的晚上<br/>
+                        快來跟我們一起解謎<br/>
+                    </p>
+                    <iframe
+                        width="100%"
+                        height="340"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCQMK5bIwuz7myzLr_2A7vVIn8gksT2o0g&q=台北市大同區延平北路二段237號2樓" allowfullscreen>
+                    </iframe>
+                    <a href="https://www.google.com.tw/maps/place/103台北市大同區延平北路二段237號" target="_blank">
+                        <button>在GoogleMap開啟</button>
+                    </a>
+                </div>
             </div>
-            <button>在GoogleMap開啟</button>
+            <div class="col span_4_of_12">
+                <div class="details">
+                    <header>活動細節</header>
+                    <div>
+                        <h3>時間</h3>
+                        <p>
+                            00:00-00:00 2017-08-27<br/>
+                            00:00-00:00 2017-09-10
+                        </p>
+                        <hr/>
+                        
+                        <h3>地點</h3>
+                        <p>
+                            台北市社區營造中心 仁安醫院
+                        </p>
+                        <hr/>
+
+                        <h3>票價</h3>
+                        <p>1比特幣</p>
+                        <hr/>
+                        <button>我要訂票</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="activityDetails">
-            <div class="detail">
-                <h1>活動細節</h1>
-            </div>
-            <div class="time">
-                <h1>時間</h1>
-                <h2>00:00-00:00 2017-08-27</h2>
-                <h2>00:00-00:00 2017-09-10</h2>
-            </div>
-            <div class="location">
-                <h1>地點</h1>
-                <h2>台北市社區營造中心 仁安醫院</h2>
-            </div>
-            <div class="ticketPrice">
-                <h1>票價</h1>
-                <h2>1比特幣</h2>
-            </div>
-            <button>我要訂票</button>
+    </div>
+    <footer>
+        <div class="container">
+            &copy 2017 築夢劇坊
         </div>
-    </div>
-    <div class="footer">
-        <h6>&copy 2017 築夢劇坊</h6>
-    </div>
+    </footer>
 </body>
 </html>
