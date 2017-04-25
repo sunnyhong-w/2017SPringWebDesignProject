@@ -2,15 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>最新演出</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header>
         <nav class="container">
             <a href="index.html"><img class="logo" src="image/smalllogo.png"/></a>
             <ul>
-                <li><a href="index.html">認識築夢</a></li>
+                <li class="hidden-xs hidden-sm"><a href="index.html">認識築夢</a></li>
                 <li><a href="memberIntroduce.html">成員介紹</a></li>
                 <li><a href="recentShow.html">最新演出</a></li>
                 <li><a href="pastShows.html">歷年演出</a></li>
@@ -19,52 +21,54 @@
     </header>
 
     <div class="main recentShowPage">
-        <div class="container section group">
-            <div class="col span_8_of_12">
-                <div class="information">
-                    <h1>謎莊</h1>
-                    <div class="timeAndLocation">
-                        00:00 - 00:00 08/27, 09/10 在 台北市社區營造中心 仁安醫院
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="information">
+                        <h1>謎莊</h1>
+                        <div class="timeAndLocation">
+                            00:00 - 00:00 08/27, 09/10 在 台北市社區營造中心 仁安醫院
+                        </div>
+                        <p>
+                            一個謎一樣的山莊<br/>
+                            一張謎一樣的劇本<br/>
+                            一段開始就不能停止的樂章<br/>
+                            8/27 9/10 的晚上<br/>
+                            快來跟我們一起解謎<br/>
+                        </p>
+                        <iframe
+                            width="100%"
+                            height="340"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCQMK5bIwuz7myzLr_2A7vVIn8gksT2o0g&q=台北市大同區延平北路二段237號2樓" allowfullscreen>
+                        </iframe>
+                        <a href="https://www.google.com.tw/maps/place/103台北市大同區延平北路二段237號" target="_blank">
+                            <button>在GoogleMap開啟</button>
+                        </a>
                     </div>
-                    <p>
-                        一個謎一樣的山莊<br/>
-                        一張謎一樣的劇本<br/>
-                        一段開始就不能停止的樂章<br/>
-                        8/27 9/10 的晚上<br/>
-                        快來跟我們一起解謎<br/>
-                    </p>
-                    <iframe
-                        width="100%"
-                        height="340"
-                        frameborder="0" style="border:0"
-                        src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCQMK5bIwuz7myzLr_2A7vVIn8gksT2o0g&q=台北市大同區延平北路二段237號2樓" allowfullscreen>
-                    </iframe>
-                    <a href="https://www.google.com.tw/maps/place/103台北市大同區延平北路二段237號" target="_blank">
-                        <button style="float: right;">在GoogleMap開啟</button>
-                    </a>
                 </div>
-            </div>
-            <div class="col span_4_of_12">
-                <div class="details">
-                    <header>活動細節</header>
-                    <div>
-                        <h3>時間</h3>
-                        <p>
-                            00:00-00:00 2017-08-27<br/>
-                            00:00-00:00 2017-09-10
-                        </p>
-                        <hr/>
-                        
-                        <h3>地點</h3>
-                        <p>
-                            台北市社區營造中心 仁安醫院
-                        </p>
-                        <hr/>
+                <div class="col-md-4">
+                    <div class="details">
+                        <header>活動細節</header>
+                        <div>
+                            <h3>時間</h3>
+                            <p>
+                                00:00-00:00 2017-08-27<br/>
+                                00:00-00:00 2017-09-10
+                            </p>
+                            <hr/>
+                            
+                            <h3>地點</h3>
+                            <p>
+                                台北市社區營造中心 仁安醫院
+                            </p>
+                            <hr/>
 
-                        <h3>票價</h3>
-                        <p>1比特幣</p>
-                        <hr/>
-                        <button>我要訂票</button>
+                            <h3>票價</h3>
+                            <p>1比特幣</p>
+                            <hr/>
+                            <button>我要訂票</button>
+                        </div>
                     </div>
                 </div>
             </div>

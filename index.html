@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>認識築夢</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div id="fb-root"></div>
@@ -20,7 +22,7 @@
         <nav class="container">
             <a href="index.html"><img class="logo" src="image/smalllogo.png"/></a>
             <ul>
-                <li><a href="index.html">認識築夢</a></li>
+                <li class="hidden-xs hidden-sm"><a href="index.html">認識築夢</a></li>
                 <li><a href="memberIntroduce.html">成員介紹</a></li>
                 <li><a href="recentShow.html">最新演出</a></li>
                 <li><a href="pastShows.html">歷年演出</a></li>
@@ -29,7 +31,6 @@
     </header>
 
     <div class="main landingPage">
-        <img src="image/introduce.png" class="introduceBackground">
         <div class="introduce">
             <div class="container">
                 <!-- <img src="" alt="membersPhoto"> --><!--從缺中-->
@@ -48,7 +49,7 @@
         <div class="recognizeTheater">
             <div class="container">
                 <h1>認識劇坊</h1>
-                <img src="image/logo.jpg">
+                <!-- <img src="image/logo.jpg"> -->
                 <p>
                     由一群戲劇的狂熱份子所創建的一個園地。<br/>
                     期許在忙碌的都會生活裡，<br/>
@@ -58,19 +59,19 @@
         </div>
         <div class="recentShowAndFanPage">
             <div class="container">
-                <div class="section group">
-                    <div class="recentShow col span_8_of_12">
+                <div class="row">
+                    <div class="recentShow col-md-7 col-lg-8">
                         <header>近期演出</header>
                         <a href="recentShow.html">
                             <!-- <img src="image\演出\謎莊\預告照\謎莊海報.jpg" alt="謎莊">-->
-                            <div class="recentShowDetail">
-                                <div class="date"><span>2017.08.27 / 2017.09.10</span></div>
+                            <div class="recentShowDetail show" style="background-image: url(image/index_謎莊海報.jpg)">
+                                <span class="date">2017.08.27 / 2017.09.10</span>
                                 <div class="title">謎莊</div>
                                 <div class="location">台北市大同區延平北路二段237號2樓</div>
                             </div>
                         </a>
                     </div>
-                    <div class="fanPage col span_4_of_12">
+                    <div class="fanPage col col-md-5 col-lg-4">
                         <div class="fb-page" data-href="https://www.facebook.com/wdtheatre/" data-tabs="timeline" data-width="372" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/wdtheatre/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/wdtheatre/">築夢劇坊</a></blockquote></div>
                     </div>
                 </div>

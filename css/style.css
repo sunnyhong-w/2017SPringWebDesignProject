@@ -105,87 +105,6 @@ table {
  }
  /* End of font-family import*/
 
-/* Grid System */
-
-/*  SECTIONS  */
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-/*  COLUMN SETUP  */
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 3.03%;
-}
-.col:first-child { margin-left: 0; }
-
-/*  GROUPING  */
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
-/*  GRID OF TWELVE  */
-.span_12_of_12 {
-	width: 100%;
-}
-
-.span_11_of_12 {
-  	width: 91.41%;
-}
-.span_10_of_12 {
-  	width: 82.82%;
-}
-
-.span_9_of_12 {
-  	width: 74.24%;
-}
-
-.span_8_of_12 {
-  	width: 65.65%;
-}
-
-.span_7_of_12 {
-  	width: 57.07%;
-}
-
-.span_6_of_12 {
-  	width: 48.48%;
-}
-
-.span_5_of_12 {
-  	width: 39.89%;
-}
-
-.span_4_of_12 {
-  	width: 31.31%;
-}
-
-.span_3_of_12 {
-  	width: 22.72%;
-}
-
-.span_2_of_12 {
-  	width: 14.14%;
-}
-
-.span_1_of_12 {
-  	width: 5.555%;
-}
-
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-    
-    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
-	width: 100%; 
-	}
-}
-
-/* End of grid system*/
-
 /* our css */
 
 * {
@@ -196,16 +115,20 @@ body {
 	font-family: 'Noto Sans TC' , "微軟正黑體",  sans-serif !important;
 }
 
-a {
+a, a:hover {
 	color: inherit;
 	text-decoration: none;
 }
 
-.container {
+button {
+	outline: none;
+}
+
+/*.container {
 	width: 100%;
 	max-width: 1188px;
 	margin: auto;
-}
+}*/
 
 body > header {
 	background: #2b2b2b;
@@ -240,7 +163,15 @@ body > header li {
 	display: inline-block;
 	text-decoration: none;
 	width: 84px;
+}
 
+body > header li a {
+	transition: opacity 0.3s;
+	opacity: 1;
+}
+
+body > header li a:hover {
+	opacity: 0.75;
 }
 
 body > footer {
@@ -266,6 +197,10 @@ body > footer > div {
 }
 
 .landingPage .introduce {
+	background: black url(../image/introduce.jpg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
 	color: white;
 	text-align: center;
 	font-size: 20px;
@@ -286,7 +221,7 @@ body > footer > div {
 }
 
 .landingPage .recognizeTheater {
-	padding: 25px 0 62px 0;
+	padding: 62px 0;
 	font-size: 20px;
 	line-height: 30px;
 	text-align: center;
@@ -304,7 +239,7 @@ body > footer > div {
 }
 
 .landingPage .recentShowAndFanPage {
-	overflow: auto;
+	margin-top: 62px;
 }
 
 .landingPage .recentShow {
@@ -323,41 +258,14 @@ body > footer > div {
 }
 
 .landingPage .recentShowDetail {
-	background: -webkit-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
-	background: -o-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
-	background: -moz-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
-	background: linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
-	color: white;
 	margin-top: 15px;
-	padding: 50px 0 50px 0;
-	text-align: center;
-}
-
-.landingPage .recentShowDetail .date {
-	font-size: 24px;
-	margin-bottom: 45px;
-}
-
-.landingPage .recentShowDetail .date > span{
-	border-bottom: 1px solid #eee;
-	font-weight: 200;
-}
-
-.landingPage .recentShowDetail .title {
-	font-size: 48px;
-	margin-bottom: 20px;
-	font-weight: 500;
-}
-
-.landingPage .recentShowDetail .location {
-	font-size: 18px;
-	font-weight: 200;
+    text-shadow: 0 0 7px rgba(0,0,0,0.8);
 }
 
 .membersPage .bigPicture {
 	width: 100%;
 	height: 318px;
-	background: #000 url(image/members_big_picture.jpg);
+	background: #000 url(../image/members_big_picture.jpg);
     background-size: inherit;
     background-position: center;
     background-repeat: no-repeat;
@@ -366,6 +274,7 @@ body > footer > div {
 .membersPage .team {
 	margin-top: 45px;
 	background: #eee;
+	padding-bottom: 23px;
 }
 
 .membersPage .team header {
@@ -375,29 +284,21 @@ body > footer > div {
 	font-weight: 800;
 }
 
-.membersPage .members {
-	margin-left: -36px;
-	margin-top: -35px;
-	overflow: auto;
-}
-
 .membersPage .member {
-	float: left;
 	width: 158px;
 	height: 246px;
-	margin-left: 36px;
-	margin-top: 42px;
 	padding: 5px 5px;
 }
 
-.membersPage .member img {
-	/*width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 168px;*/
+.membersPage .member .imageWrapper {
 	width: 100%;
 	height: 168px;
 	margin-top: 10px;
+	overflow: hidden;
+}
+
+.membersPage .member .imageWrapper img {
+	width: 100%;
 }
 
 .membersPage .member .name {
@@ -425,10 +326,20 @@ body > footer > div {
 	font-weight: 500;
 	border: 0;
 	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.recentShowPage button:hover {
+	background: #6fa054;
+}
+
+.recentShowPage button:active {
+	background: #65944b;
 }
 
 .recentShowPage .information {
-	padding: 34px 0 20px 0;
+	overflow: auto;
+	margin-bottom: 20px;
 }
 
 .recentShowPage .information h1 {
@@ -452,7 +363,14 @@ body > footer > div {
 .recentShowPage .information button {
 	font-size: 18px;
 	margin-top: 25px;
-	width: 168px;
+	padding: 0 15px;
+	/*float: right;*/
+}
+
+@media (max-width: 768px) {
+	.recentShowPage .information button {
+		width: 100%;
+	}
 }
 
 .recentShowPage .details {
@@ -483,8 +401,8 @@ body > footer > div {
 }
 
 .recentShowPage .details hr {
-	border-color: #ccc;
-    border-top: none;
+    border-top: #ccc 1px solid;
+    border-bottom: 0px;
     margin: 14px 0;
 }
 
@@ -507,36 +425,100 @@ body > footer > div {
 	background-blend-mode: multiply;
 }
 
-.pastShowsPage .shows .blend{
-    position: absolute;
-    z-index: -99;    
-	mix-blend-mode: multiply;
+.show {
+	text-align: center;
+	padding: 48px 0;
+	color: white;
+	position: relative;
+	background-position: left bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.show > * {
+	position: relative;
+}
+
+.show::before{
+	content: '';
+	display: block;
 	background: -webkit-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
 	background: -o-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
 	background: -moz-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
 	background: linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
-	width: 1188px;
-    height: 241px;
+    position: absolute;
+	mix-blend-mode: multiply;
+	width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s;
 }
 
-.pastShowsPage .show {
-	text-align: center;
-	padding: 48px 0;
-	color: white;
+.show:hover::before{
+	opacity: 0;
 }
 
-.pastShowsPage .show .date {
+.show .date {
 	font-size: 24px;
 	padding: 0 30px;
 	border-bottom: 2px solid white;
 }
 
-.pastShowsPage .show .title {
+.show .title {
 	margin-top: 35px;
 	font-size: 48px;
 }
 
-.pastShowsPage .show .location {
+.show .location {
 	margin-top: 20px;
 	font-size: 18px;
+}
+
+.pastShowPhotosPage .show {
+    padding: 80px 0;
+}
+
+.pastShowPhotosPage .show::before{
+	display: none;
+}
+
+.pastShowPhotosPage .photos {
+	margin-top: 32px;
+}
+
+.pastShowPhotosPage .photo {
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+	height: 168px;
+	overflow: hidden;
+	background-size: cover;
+	margin-bottom: 36px;
+}
+
+.pastShowPhotosPage .photo img {
+	width: 100%;
+}
+
+.pastShowPhotosPage .photo::before{
+	content: '';
+	display: block;
+	/*background: -webkit-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
+	background: -o-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
+	background: -moz-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
+	background: linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));*/
+	background: black;
+    position: absolute;
+	mix-blend-mode: multiply;
+	width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+	opacity: 0.25;
+    transition: opacity 0.5s;
+}
+
+.pastShowPhotosPage .photo:hover::before{
+	opacity: 0;
 }
