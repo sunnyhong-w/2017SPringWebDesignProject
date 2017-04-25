@@ -365,13 +365,14 @@ body > footer > div {
 
 .membersPage .team {
 	margin-top: 45px;
-	background: #e1e1e1;
+	background: #eee;
 }
 
 .membersPage .team header {
 	font-size: 48px;
 	padding: 23px;
-	border-bottom: 1px solid #2b2b2b;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	font-weight: 800;
 }
 
 .membersPage .members {
@@ -381,12 +382,12 @@ body > footer > div {
 }
 
 .membersPage .member {
-	background: white;
 	float: left;
 	width: 158px;
 	height: 246px;
 	margin-left: 36px;
 	margin-top: 42px;
+	padding: 5px 5px;
 }
 
 .membersPage .member img {
@@ -402,11 +403,14 @@ body > footer > div {
 .membersPage .member .name {
 	margin-top: 11px;
 	font-size: 18px;
+	font-weight: 600;
+	color: #111;
 }
 
 .membersPage .member .title {
 	margin-top: 7px;
 	font-size: 14px;
+	font-weight: 100;
 }
 
 .recentShowPage {
@@ -415,13 +419,15 @@ body > footer > div {
 
 .recentShowPage button {
 	height: 43px;
-	background: white;
-	border: 2px solid black;
-	border-radius: 10px;
+	background: #86C166;
+	color: white;
+	font-family: 'Noto Sans TC' , "微軟正黑體",  sans-serif !important;
+	font-weight: 500;
+	border: 0;
+	border-radius: 5px;
 }
 
 .recentShowPage .information {
-	background: #d3d3d3;
 	padding: 34px 0 20px 0;
 }
 
@@ -438,7 +444,7 @@ body > footer > div {
 
 .recentShowPage .information p {
 	font-size: 18px;
-	line-height: 22px;
+	line-height: 2;
 	font-weight: lighter;
 	margin-bottom: 14px;
 }
@@ -450,11 +456,11 @@ body > footer > div {
 }
 
 .recentShowPage .details {
-	background: #ececec;
+	border: 1px solid #eee;
 }
 
 .recentShowPage .details > header {
-	background: #979797;
+	background: #4A593D;
 	color: white;
 	padding: 18px 12px;
 	font-size: 20px;
@@ -477,7 +483,7 @@ body > footer > div {
 }
 
 .recentShowPage .details hr {
-	border-color: black;
+	border-color: #ccc;
     border-top: none;
     margin: 14px 0;
 }
@@ -495,24 +501,34 @@ body > footer > div {
 	padding: 70px 0;
 }
 
-.pastShowsPage .shows > div:nth-child(odd) {
-	background: #efefef;
+.pastShowsPage .shows > div img{
+    position: absolute;
+    z-index: -100;    
+	background-blend-mode: multiply;
 }
 
-.pastShowsPage .shows > div:nth-child(even) {
-	background: #f6f6f6;
+.pastShowsPage .shows .blend{
+    position: absolute;
+    z-index: -99;    
+	mix-blend-mode: multiply;
+	background: -webkit-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
+	background: -o-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
+	background: -moz-linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
+	background: linear-gradient(rgba(43,43,43,0),rgba(43,43,43,1));
+	width: 1188px;
+    height: 241px;
 }
 
 .pastShowsPage .show {
-	background: white;
 	text-align: center;
 	padding: 48px 0;
+	color: white;
 }
 
 .pastShowsPage .show .date {
 	font-size: 24px;
 	padding: 0 30px;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid white;
 }
 
 .pastShowsPage .show .title {
