@@ -477,6 +477,7 @@ body > footer > div {
 
 .pastShowPhotosPage .show {
     padding: 80px 0;
+    text-shadow: 0 0 7px rgba(0,0,0,0.8);
 }
 
 .pastShowPhotosPage .show::before{
